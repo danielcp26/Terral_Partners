@@ -4,11 +4,54 @@ import {
   motion,
   MotionConfig,
   useReducedMotion,
+  useAnimate,
+  useInView,
+  stagger,
+  useScroll,
+  useSpring,
 } from "motion/react";
-import { useState, type ReactNode } from "react";
+import { useState, useEffect, type ReactNode } from "react";
 import { Plus, Minus } from "lucide-react";
 export function MotionProvider({ children }: { children: ReactNode }) {
   return <MotionConfig reducedMotion="user">{children}</MotionConfig>;
+}
+export function ReadingProgress() {
+  const { scrollYProgress } = useScroll();
+  const smooth = useSpring(scrollYProgress, { stiffness: 160, damping: 30 });
+  const reduce = useReducedMotion();
+  return (
+    <motion.div
+      className="reading-progress"
+      aria-hidden="true"
+      style={{ scaleX: reduce ? scrollYProgress : smooth }}
+    />
+  );
+}
+export function HeroStage({ children }: { children: ReactNode }) {
+  const [scope, animate] = useAnimate();
+  const reduce = useReducedMotion();
+  useEffect(() => {
+    if (reduce) return;
+    const text = animate(
+      ".hero-copy > *",
+      { opacity: [0, 1], y: [30, 0] },
+      { duration: 0.65, delay: stagger(0.09), ease: [0.22, 1, 0.36, 1] },
+    );
+    const photo = animate(
+      ".hero-photo",
+      { scale: [1.12, 1] },
+      { duration: 1.2, ease: [0.22, 1, 0.36, 1] },
+    );
+    return () => {
+      text.stop();
+      photo.stop();
+    };
+  }, [animate, reduce]);
+  return (
+    <section ref={scope} className="hero container">
+      {children}
+    </section>
+  );
 }
 export function Reveal({
   children,
@@ -18,14 +61,32 @@ export function Reveal({
   className?: string;
 }) {
   const reduce = useReducedMotion();
+  const [scope, animate] = useAnimate();
+  const inView = useInView(scope, { once: true, amount: 0.12 });
+  useEffect(() => {
+    if (!inView || reduce) return;
+    const entrance = animate(
+      scope.current,
+      { opacity: [0.25, 1], y: [36, 0] },
+      { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
+    );
+    const cards = scope.current.querySelectorAll(
+      ".audience-card, .why-items > div",
+    );
+    const cascade = cards.length
+      ? animate(
+          cards,
+          { opacity: [0, 1], y: [26, 0] },
+          { duration: 0.55, delay: stagger(0.12), ease: "easeOut" },
+        )
+      : null;
+    return () => {
+      entrance.stop();
+      cascade?.stop();
+    };
+  }, [inView, reduce, animate, scope]);
   return (
-    <motion.div
-      className={className}
-      initial={false}
-      whileInView={reduce ? {} : { y: [12, 0] }}
-      viewport={{ once: true, amount: 0.12 }}
-      transition={{ duration: 0.45, ease: "easeOut" }}
-    >
+    <motion.div ref={scope} className={className} initial={false}>
       {children}
     </motion.div>
   );

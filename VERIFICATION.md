@@ -5,9 +5,10 @@ Checked locally on October 3, 2026. No public deployment or real inquiry deliver
 - Production build: passed (Next.js 16.3.8). Local-only social URL warning expected until a verified public origin is configured.
 - TypeScript: passed.
 - ESLint: passed, no warnings.
-- Playwright: 12 tests passed.
+- Playwright: original 12 tests plus 3 new interaction tests passed (15 total).
 - Axe: no WCAG A/AA violations detected on both landing-page languages at 375, 768 and 1440 px; buyer form checked as well.
 - No horizontal overflow at tested sizes. Both images loaded. Full-page screenshots reviewed for desktop, tablet and mobile composition.
+- New category tabs and process walkthrough: keyboard, selection state and relevant inquiry links verified in both languages. Hero animation verified with motion enabled and reduced motion.
 - ES default redirect, language/section preservation, keyboard skip link, Escape behavior, FAQ and mobile navigation verified.
 - Buyer and supplier form validation, email/phone requirements, category preselection, back-step retention and privacy acknowledgement checked.
 - Unconfigured delivery remains explicitly unavailable. A separate fixture server verified loading, failure retention, retry idempotency and the accepted receipt UI.

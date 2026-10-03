@@ -8,9 +8,6 @@ import {
   HardHat,
   KeyRound,
   Handshake,
-  Wind,
-  Armchair,
-  Sun,
   Check,
   MapPin,
   MoveUpRight,
@@ -19,7 +16,11 @@ import { notFound } from "next/navigation";
 import { isLocale, business } from "@/lib/config";
 import { content } from "@/lib/content";
 import Button from "@/components/kokonutui/slide-text-button";
-import { FAQ, Reveal } from "@/components/interactive";
+import { FAQ, Reveal, HeroStage } from "@/components/interactive";
+import {
+  CategoryExplorer,
+  ProcessExplorer,
+} from "@/components/project-explorer";
 export async function generateMetadata({
   params,
 }: {
@@ -46,10 +47,9 @@ export default async function Home({
   const buyer = `/${locale}/inquiry/buyer`;
   const supplier = `/${locale}/inquiry/supplier`;
   const sectorIcons = [Building2, HardHat, Hotel, KeyRound, Handshake];
-  const categoryIcons = [Wind, Armchair, Sun];
   return (
     <main id="main">
-      <section className="hero container">
+      <HeroStage>
         <div className="hero-copy">
           <p className="eyebrow">
             <span className="small-line" />
@@ -71,11 +71,12 @@ export default async function Home({
         </div>
         <div className="hero-visual">
           <Image
-            src="/images/architecture.jpg"
+            src="/images/guanacaste-coast.jpg"
             alt={t.hero.imageAlt}
             fill
             sizes="(max-width: 760px) 100vw, 52vw"
             priority
+            quality={85}
             className="hero-photo"
           />
           <div className="image-label">
@@ -88,7 +89,7 @@ export default async function Home({
           </div>
           <div className="image-corner" />
         </div>
-      </section>
+      </HeroStage>
       <div className="container hero-bottom">
         <span>01 — TERRAL PARTNERS</span>
         <Link href="#buyers">
@@ -168,30 +169,7 @@ export default async function Home({
               </div>
               <p>{t.categories.intro}</p>
             </div>
-            <div className="category-grid">
-              {t.categories.items.map((item, i) => {
-                const Icon = categoryIcons[i];
-                return (
-                  <Link
-                    href={`${buyer}?category=${["hvac", "furniture", "energy"][i]}`}
-                    className="category-card"
-                    key={item.title}
-                  >
-                    <div className="category-top">
-                      <Icon size={35} strokeWidth={1} aria-hidden="true" />
-                      <span>0{i + 1}</span>
-                    </div>
-                    <p className="category-tag">{item.tag}</p>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                    <span className="category-arrow">
-                      <ArrowUpRight size={21} aria-hidden="true" />
-                      <span className="sr-only">{t.buyerCta}</span>
-                    </span>
-                  </Link>
-                );
-              })}
-            </div>
+            <CategoryExplorer items={t.categories.items} locale={locale} />
             <div className="category-note">
               <p>{t.categories.note}</p>
               <Link className="text-link" href={buyer}>
@@ -212,18 +190,7 @@ export default async function Home({
               </div>
               <p>{t.process.intro}</p>
             </div>
-            <ol className="process-grid">
-              {t.process.steps.map((step, i) => (
-                <li key={step.title}>
-                  <div className="step-number">
-                    <span>0{i + 1}</span>
-                    <ArrowUpRight size={20} aria-hidden="true" />
-                  </div>
-                  <h3>{step.title}</h3>
-                  <p>{step.description}</p>
-                </li>
-              ))}
-            </ol>
+            <ProcessExplorer steps={t.process.steps} locale={locale} />
             <p className="process-note">
               <Handshake size={24} strokeWidth={1.2} aria-hidden="true" />
               {t.process.note}

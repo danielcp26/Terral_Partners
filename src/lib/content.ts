@@ -93,7 +93,7 @@ const es: Content = {
       "Conectamos desarrolladores, hoteles, constructoras y administradores de propiedades con proveedores alineados a sus necesidades.",
     footnote: "Con enfoque en Guanacaste. Con visión de largo plazo.",
     imageAlt:
-      "Interior contemporáneo con materiales naturales y espacios abiertos; fotografía ilustrativa",
+      "Vista aérea de la costa de Guanacaste, Costa Rica, con una bahía, hoteles y viviendas; fotografía ilustrativa",
     caption: "EL PUNTO DE ENCUENTRO ENTRE UNA NECESIDAD Y UNA OPORTUNIDAD.",
     explore: "Descubra cómo trabajamos",
   },
@@ -315,7 +315,7 @@ const en: Content = {
       "We connect developers, hotels, construction companies and property managers with suppliers suited to their purchasing needs.",
     footnote: "Focused on Guanacaste. Built for lasting relationships.",
     imageAlt:
-      "Contemporary interior with natural materials and open spaces; illustrative photography",
+      "Aerial view of Guanacaste’s coastline in Costa Rica, with a bay, hotels and homes; illustrative photography",
     caption: "WHERE A PROJECT’S NEEDS MEET THE RIGHT OPPORTUNITY.",
     explore: "Discover how we work",
   },

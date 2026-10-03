@@ -27,7 +27,7 @@ If another preview already occupies port 3000, stop it or use `npm run dev -- --
 - `src/lib/inquiry.ts`: typed form copy, fields, validation and shared server schema.
 - `src/lib/legal.ts`: bilingual legal **drafts**, pending business/legal review.
 - `src/lib/config.ts`: central business details. The approved logo is configured; real email, phone and public origin remain unprovided.
-- `src/components`: shared header/footer, progressive forms, FAQ, reveal wrapper and adapted Kokonut button.
+- `src/components`: shared header/footer, progressive forms, FAQ, motion wrappers, category/process explorers and adapted Kokonut controls.
 - `src/app/[locale]`: localized pages, forms, privacy, terms and generated social images.
 - `src/app/api/inquiries/route.ts`: server-side submission integration.
 - `src/app/globals.css`: responsive brand styles and reduced-motion overrides.
@@ -38,9 +38,9 @@ The user-supplied approved logo option 04 is installed in the header and footer.
 
 Warm off-white, ocean navy and restrained sand accents; Cormorant Garamond headings and Manrope body type. Architectural photography is illustrative. Strong typography, generous whitespace and clean rectangular actions keep the site appropriate for professional services.
 
-Motion provides short section reveals, form transitions and FAQ expansion. Content is readable before animation and with JavaScript disabled. CSS hover effects and Motion respect reduced motion. The mobile menu supports keyboard operation and Escape; form errors focus the first invalid field. ES/EN preserves the equivalent route, query string and section. Form drafts are intentionally in memory only and do not persist across page/language navigation.
+Motion provides a staggered hero entrance with an image zoom-out, staggered audience cards, visible scroll reveals, an animated reading-progress line and active navigation indicator, a mobile-menu expansion, category crossfades, an interactive four-step process with an animated connection path, form transitions and FAQ expansion. Category and process tabs support arrow keys plus Home/End. Reduced-motion users receive immediate state changes without spatial effects. Content is readable before animation and with JavaScript disabled. CSS hover effects and Motion respect reduced motion. The mobile menu supports keyboard operation and Escape; form errors focus the first invalid field. ES/EN preserves the equivalent route, query string and section. Form drafts are intentionally in memory only and do not persist across page/language navigation.
 
-The CTA is adapted from the MIT-licensed [Kokonut UI Slide Text Button](https://kokonutui.com/docs/buttons/slide-text-button), using the documented source-copy installation option. Only this needed component is included. Its entrance animation was removed, duplicate text hidden from assistive technology, and reduced-motion behavior added. License: `public/kokonut-license.txt`. [Motion React documentation](https://motion.dev/docs/react) and its [accessibility guide](https://motion.dev/docs/react-accessibility) were checked before implementation.
+The CTA is adapted from the MIT-licensed [Kokonut UI Slide Text Button](https://kokonutui.com/docs/buttons/slide-text-button), using the documented source-copy installation option. The category selector also adapts the animated selected-item expansion from the MIT-licensed [Kokonut UI Toolbar registry source](https://kokonutui.com/r/toolbar.json). The demo toolbar actions are replaced with useful category selection, keyboard tab behavior and branded colors. Its entrance animation was removed, duplicate text hidden from assistive technology, and reduced-motion behavior added. License: `public/kokonut-license.txt`. [Motion React documentation](https://motion.dev/docs/react) and its [accessibility guide](https://motion.dev/docs/react-accessibility) were checked before implementation.
 
 [Bklit UI](https://bklit.com/docs/components) was reviewed but is not installed: there are no verified performance or numerical datasets to chart. Later, it could show an approved comparison of quoted lead times or actual project category totals, only with appropriate verified data and permission. No invented business statistics are used.
 
@@ -105,11 +105,15 @@ npx playwright install chromium
 npm test
 ```
 
-Playwright checks both languages at 375, 768 and 1440 px, images, overflow, keyboard navigation, mobile menu, section-preserving language switch, FAQ, links, legal routes and social previews. Axe checks WCAG A/AA rules. Form tests cover validation, preselection, contact requirements, back-step preservation and missing-integration behavior. An isolated fixture server on port 3001 tests loading, failure, retry and success states with intercepted requests. Server-handler tests use a mocked receiver to verify rejection and explicit acceptance. No test sends a real inquiry.
+Playwright checks both languages at 375, 768 and 1440 px, images, overflow, keyboard navigation, mobile menu, section-preserving language switch, FAQ, links, legal routes and social previews. Axe checks WCAG A/AA rules. Form tests cover validation, preselection, contact requirements, back-step preservation and missing-integration behavior. An isolated fixture server on port 3001 tests loading, failure, retry and success states with intercepted requests. Server-handler tests use a mocked receiver to verify rejection and explicit acceptance. No test sends a real inquiry. Additional interaction tests verify category selection, process navigation, contextual inquiry links, real hero animation and reduced-motion behavior.
 
 Screenshots are written to `test-results`. Passing automated accessibility checks does not replace a final assistive-technology review. Preview servers bind to localhost. Tests require ports 3000 and 3001.
 
 ## Assets and source notes
+
+- `public/images/guanacaste-coast.jpg`: 2560 × 1705 hero photograph by [César Badilla Miranda on Unsplash](https://unsplash.com/photos/an-aerial-view-of-a-tropical-island-with-a-beach-2hIjk-uOK80). Photographer identifies the setting as Guanacaste's coastline, with hotels and homes. Used under the Unsplash License as illustrative regional context, not as evidence of Terral projects. Responsive Next Image delivery uses quality 85.
+
+- `public/images/solar-energy.jpg`: [Solar panels by Andreas Gücklhorn on Unsplash](https://unsplash.com/photos/photo-of-three-solar-panels-7razCd-RUGs), under the Unsplash License. Dedicated illustrative image for the energy category; not a Terral Partners installation.
 
 - `public/images/architecture.jpg`: [Unsplash source image](https://images.unsplash.com/photo-1600607687920-4e2a09cf159d), used as illustrative architecture.
 - `public/images/interior.jpg`: [Unsplash source image](https://images.unsplash.com/photo-1600210492486-724fe5c67fb0), used as illustrative furnishing.

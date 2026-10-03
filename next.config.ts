@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 const config: NextConfig = {
   poweredByHeader: false,
+  images: { qualities: [75, 85, 90] },
   async redirects() {
     return [{ source: "/", destination: "/es", permanent: false }];
   },

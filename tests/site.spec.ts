@@ -159,7 +159,7 @@ test("internal links and locale-specific social images", async ({
       ...new Set(nodes.map((n) => n.getAttribute("href")!)),
     ]);
   for (const href of hrefs) {
-    const url = new URL(href, "http://127.0.0.1:3000/es");
+    const url = new URL(href, page.url());
     if (url.hash && url.pathname === "/es") {
       expect(await page.locator(`[id="${url.hash.slice(1)}"]`).count()).toBe(1);
     } else {

@@ -7,6 +7,7 @@ import SiteHeader from "@/components/site-header";
 import SiteFooter from "@/components/site-footer";
 import { MotionProvider } from "@/components/interactive";
 import "../globals.css";
+import "../coastal.css";
 const serif = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["400", "500", "600"],

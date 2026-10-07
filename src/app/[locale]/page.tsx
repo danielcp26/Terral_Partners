@@ -10,11 +10,11 @@ import {
   Handshake,
   Check,
   MapPin,
-  MoveUpRight,
 } from "lucide-react";
 import { notFound } from "next/navigation";
 import { isLocale, business } from "@/lib/config";
 import { content } from "@/lib/content";
+import CoastalFilm from "@/components/coastal-film";
 import Button from "@/components/kokonutui/slide-text-button";
 import { FAQ, Reveal, HeroStage } from "@/components/interactive";
 import {
@@ -48,16 +48,14 @@ export default async function Home({
   const supplier = `/${locale}/inquiry/supplier`;
   const sectorIcons = [Building2, HardHat, Hotel, KeyRound, Handshake];
   return (
-    <main id="main">
+    <main id="main" className="landing-page">
       <HeroStage>
         <div className="hero-copy">
-          <p className="eyebrow">
-            <span className="small-line" />
-            {t.hero.eyebrow}
+          <p className="hero-location">
+            <MapPin size={15} aria-hidden="true" /> Guanacaste, Costa Rica
           </p>
           <h1>
-            {t.hero.title}
-            <em>{t.hero.accent}</em>
+            {t.hero.title} {t.hero.accent}
           </h1>
           <p className="hero-description">{t.hero.description}</p>
           <div className="hero-buttons">
@@ -74,33 +72,26 @@ export default async function Home({
             src="/images/guanacaste-coast.jpg"
             alt={t.hero.imageAlt}
             fill
-            sizes="(max-width: 760px) 100vw, 52vw"
+            sizes="100vw"
             priority
             quality={85}
             className="hero-photo"
           />
-          <div className="image-label">
-            <span className="location-dot" />
-            GUANACASTE, COSTA RICA
-          </div>
-          <div className="hero-image-caption">
-            <span>{t.hero.caption}</span>
-            <MoveUpRight size={32} strokeWidth={1} aria-hidden="true" />
-          </div>
-          <div className="image-corner" />
+          <CoastalFilm locale={locale} />
         </div>
       </HeroStage>
       <div className="container hero-bottom">
-        <span>01 — TERRAL PARTNERS</span>
-        <Link href="#buyers">
-          {t.hero.explore}
-          <ArrowDown size={15} aria-hidden="true" />
-        </Link>
-        <span className="hero-bottom-end">
+        <p>
           {locale === "es"
-            ? "PROVEEDORES · CONEXIONES · POSIBILIDADES"
-            : "SOURCING · CONNECTIONS · POSSIBILITIES"}
-        </span>
+            ? "Conexiones locales. Posibilidades que crecen."
+            : "Local connections. Growing possibilities."}
+        </p>
+        <Link href="#categories">
+          {locale === "es"
+            ? "Explore nuestras soluciones"
+            : "Explore our solutions"}
+          <ArrowDown size={17} aria-hidden="true" />
+        </Link>
       </div>
       <section className="sectors">
         <div className="container">
@@ -211,9 +202,9 @@ export default async function Home({
             </div>
           </div>
           <div className="why-items">
-            {t.why.items.map((item, i) => (
+            {t.why.items.map((item) => (
               <div key={item.title}>
-                <span>0{i + 1}</span>
+                <Check size={20} aria-hidden="true" />
                 <div>
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>

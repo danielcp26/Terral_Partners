@@ -122,3 +122,13 @@ Screenshots are written to `test-results`. Passing automated accessibility check
 - The legal drafts describe the implemented site and outstanding decisions; they do not claim compliance. Costa Rica's [official Law 8968 text](https://www.pgrweb.go.cr/DOCS/NORMAS/1/VIGENTE/L/2010-2019/2010-2014/2011/1153F/DCEF7.HTML) was consulted as background for review requirements.
 
 See [LAUNCH-CHECKLIST.md](LAUNCH-CHECKLIST.md) for remaining launch requirements.
+
+## Coastal design and film — October 6, 2026
+
+Palette: Pacific navy `#173447`, dune sand `#c7ae86`, limestone white `#fafbf9`, sea glass `#edf2ef`, and slate `#52676d`. Manrope leads the architectural hero; Cormorant echoes the supplied wordmark in section headings. The panoramic hero is the primary motion moment. Category, process and FAQ transitions respond to user interaction; repeating section entrances were removed.
+
+`public/videos/terral-coast.mp4` is an illustrative AI-generated film made through Higgsfield, Seedance 1.5 Pro, job `645e4aa6-d291-4a0d-aad2-b00486b032e9`. One four-second 720p silent generation was quoted at 4.8 credits, within the requested 10-credit cap. No other generation was submitted. It is inspired by Guanacaste, not documentation of an actual location or Terral project; both localized footers disclose this.
+
+The self-hosted H.264 asset is approximately 1.2 MB, uses fast-start delivery, and has no audio track or external player. Pause controls retain user intent after scrolling. Playback pauses offscreen and in hidden tabs. Reduced-motion and data-saving preferences prevent automatic video download; the original Guanacaste photo remains the fallback. Data-saving users can explicitly start playback.
+
+Set `PLAYWRIGHT_PORT` to test an alternate preview port; the fixture server still uses port 3001.

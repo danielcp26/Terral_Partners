@@ -86,7 +86,7 @@ const es: Content = {
   buyerCta: "Encontrar proveedores",
   supplierCta: "Ser proveedor",
   hero: {
-    eyebrow: "CONEXIONES QUE IMPULSAN PROYECTOS",
+    eyebrow: "Conexiones que impulsan proyectos",
     title: "Los proveedores adecuados para",
     accent: "su próximo proyecto.",
     description:
@@ -94,16 +94,16 @@ const es: Content = {
     footnote: "Con enfoque en Guanacaste. Con visión de largo plazo.",
     imageAlt:
       "Vista aérea de la costa de Guanacaste, Costa Rica, con una bahía, hoteles y viviendas; fotografía ilustrativa",
-    caption: "EL PUNTO DE ENCUENTRO ENTRE UNA NECESIDAD Y UNA OPORTUNIDAD.",
+    caption: "El punto de encuentro entre una necesidad y una oportunidad.",
     explore: "Descubra cómo trabajamos",
   },
   audiences: {
-    label: "DOS CAMINOS. UN MISMO PROPÓSITO.",
+    label: "Dos caminos. Un mismo propósito.",
     title: "Conectamos lo que necesita\ncon quienes lo hacen posible.",
     intro:
       "Cada proyecto empieza con una buena conversación. Encuentre su punto de partida.",
     buyer: {
-      label: "PARA COMPRADORES",
+      label: "Para compradores",
       title: "Su proyecto, bien acompañado.",
       items: [
         "Comparta sus necesidades de compra.",
@@ -112,7 +112,7 @@ const es: Content = {
       ],
     },
     supplier: {
-      label: "PARA PROVEEDORES",
+      label: "Para proveedores",
       title: "Nuevas oportunidades, con sentido.",
       items: [
         "Explore oportunidades comerciales relevantes.",
@@ -122,7 +122,7 @@ const es: Content = {
     },
   },
   sectors: {
-    label: "TRABAJAMOS CON",
+    label: "Trabajamos con",
     items: [
       "Desarrolladores",
       "Constructoras",
@@ -132,7 +132,7 @@ const es: Content = {
     ],
   },
   categories: {
-    label: "LO QUE CONECTAMOS",
+    label: "Lo que conectamos",
     title: "Soluciones para espacios\nque toman forma.",
     intro:
       "Nos enfocamos en categorías esenciales para equipar, operar y desarrollar su proyecto.",
@@ -141,26 +141,26 @@ const es: Content = {
         title: "Climatización y HVAC",
         description:
           "Equipos y soluciones de climatización según el tipo de espacio, su uso y sus requerimientos técnicos.",
-        tag: "CONFORT Y OPERACIÓN",
+        tag: "Confort y operación",
       },
       {
         title: "Mobiliario y electrodomésticos",
         description:
           "Opciones para equipar espacios residenciales, comerciales y de hospitalidad con intención.",
-        tag: "ESPACIOS Y EQUIPAMIENTO",
+        tag: "Espacios y equipamiento",
       },
       {
         title: "Soluciones de energía",
         description:
           "Alternativas solares y energéticas cuando la demanda y la cobertura de proveedores lo permitan.",
-        tag: "ENERGÍA Y EFICIENCIA",
+        tag: "Energía y eficiencia",
       },
     ],
     note: "La disponibilidad depende de los requisitos del proyecto y de la cobertura de proveedores.",
     other: "¿Busca algo más? Conversemos",
   },
   process: {
-    label: "UN PROCESO CLARO",
+    label: "Un proceso claro",
     title: "De la necesidad\na la conexión adecuada.",
     intro: "Le acompañamos en la coordinación comercial, paso a paso.",
     steps: [
@@ -188,7 +188,7 @@ const es: Content = {
     note: "El comprador contrata y paga directamente al proveedor. El proveedor es responsable de la entrega, instalación, garantías y cumplimiento.",
   },
   why: {
-    label: "EL VALOR DE UNA BUENA CONEXIÓN",
+    label: "El valor de una buena conexión",
     title: "Más claridad.\nMejores conversaciones.",
     description:
       "Un aliado comercial para ordenar la búsqueda y mantener las oportunidades en movimiento.",
@@ -216,7 +216,7 @@ const es: Content = {
     ],
   },
   partnership: {
-    label: "CREZCAMOS CON BUENAS CONEXIONES",
+    label: "Crezcamos con buenas conexiones",
     title: "Su oferta puede ser\nla pieza que falta.",
     description:
       "Buscamos conocer proveedores interesados en oportunidades comerciales en Guanacaste. Para evaluar el encaje, queremos entender:",
@@ -231,7 +231,7 @@ const es: Content = {
       "Espacio de estar con mobiliario contemporáneo; fotografía ilustrativa",
   },
   about: {
-    label: "SOBRE TERRAL PARTNERS",
+    label: "Sobre Terral Partners",
     title: "Conexiones con propósito.\nRelaciones con futuro.",
     paragraphs: [
       "Terral Partners nace de una iniciativa conjunta de dos socios con un propósito compartido: facilitar conexiones comerciales entre empresas y proveedores adecuados a sus necesidades.",
@@ -240,7 +240,7 @@ const es: Content = {
     ],
   },
   faq: {
-    label: "ANTES DE CONVERSAR",
+    label: "Antes de conversar",
     title: "Preguntas, con respuestas claras.",
     items: [
       {
@@ -274,7 +274,7 @@ const es: Content = {
     ],
   },
   contact: {
-    label: "EL SIGUIENTE PASO EMPIEZA AQUÍ",
+    label: "El siguiente paso empieza aquí",
     title: "Hablemos de lo\nque viene.",
     description:
       "Un proyecto por equipar. Una oferta por conectar. Cuéntenos en qué está trabajando.",
@@ -282,9 +282,9 @@ const es: Content = {
   },
   footer: {
     descriptor: "Conexión de proveedores\ny desarrollo comercial.",
-    navigation: "NAVEGACIÓN",
+    navigation: "Navegación",
     explore: "EMPECEMOS",
-    location: "NUESTRO ENFOQUE",
+    location: "Nuestro enfoque",
     privacy: "Privacidad",
     terms: "Términos de uso",
     rights: "Todos los derechos reservados.",
@@ -308,7 +308,7 @@ const en: Content = {
   buyerCta: "Find suppliers",
   supplierCta: "Become a supplier",
   hero: {
-    eyebrow: "CONNECTIONS THAT MOVE PROJECTS FORWARD",
+    eyebrow: "Connections that move projects forward",
     title: "The right suppliers for",
     accent: "your next project.",
     description:
@@ -316,11 +316,11 @@ const en: Content = {
     footnote: "Focused on Guanacaste. Built for lasting relationships.",
     imageAlt:
       "Aerial view of Guanacaste’s coastline in Costa Rica, with a bay, hotels and homes; illustrative photography",
-    caption: "WHERE A PROJECT’S NEEDS MEET THE RIGHT OPPORTUNITY.",
+    caption: "Where a project’s needs meet the right opportunity.",
     explore: "Discover how we work",
   },
   audiences: {
-    label: "TWO PATHS. ONE SHARED PURPOSE.",
+    label: "Two paths. One shared purpose.",
     title: "Connecting what you need\nwith those who make it possible.",
     intro:
       "Every project starts with a good conversation. Find your starting point.",
@@ -334,7 +334,7 @@ const en: Content = {
       ],
     },
     supplier: {
-      label: "FOR SUPPLIERS",
+      label: "For suppliers",
       title: "New opportunities. A better fit.",
       items: [
         "Explore relevant commercial opportunities.",
@@ -344,7 +344,7 @@ const en: Content = {
     },
   },
   sectors: {
-    label: "WHO WE WORK WITH",
+    label: "Who we work with",
     items: [
       "Property developers",
       "Construction companies",
@@ -354,7 +354,7 @@ const en: Content = {
     ],
   },
   categories: {
-    label: "WHAT WE CONNECT",
+    label: "What we connect",
     title: "Solutions for spaces\ncoming to life.",
     intro:
       "We focus on essential categories to equip, operate and develop your project.",
@@ -363,26 +363,26 @@ const en: Content = {
         title: "Air conditioning & HVAC",
         description:
           "Climate solutions and equipment suited to your space, its purpose and its technical requirements.",
-        tag: "COMFORT & OPERATIONS",
+        tag: "Comfort & operations",
       },
       {
         title: "Furniture & appliances",
         description:
           "Considered options for furnishing residential, commercial and hospitality spaces.",
-        tag: "SPACES & EQUIPMENT",
+        tag: "Spaces & equipment",
       },
       {
         title: "Energy solutions",
         description:
           "Solar and energy alternatives where demand and supplier coverage support them.",
-        tag: "ENERGY & EFFICIENCY",
+        tag: "Energy & efficiency",
       },
     ],
     note: "Availability depends on project requirements and supplier coverage.",
     other: "Looking for something else? Let’s talk",
   },
   process: {
-    label: "A CLEAR WAY FORWARD",
+    label: "A clear way forward",
     title: "From a purchasing need\nto the right connection.",
     intro: "Commercial coordination that supports you, step by step.",
     steps: [
@@ -410,7 +410,7 @@ const en: Content = {
     note: "Buyers contract with and pay suppliers directly. Suppliers are responsible for delivery, installation, warranties and fulfillment.",
   },
   why: {
-    label: "THE VALUE OF A GOOD CONNECTION",
+    label: "The value of a good connection",
     title: "More clarity.\nBetter conversations.",
     description:
       "A commercial partner to bring structure to your search and keep opportunities moving.",
@@ -438,7 +438,7 @@ const en: Content = {
     ],
   },
   partnership: {
-    label: "GROW THROUGH GOOD CONNECTIONS",
+    label: "Grow through good connections",
     title: "Your offering could be\nthe missing piece.",
     description:
       "We want to meet suppliers interested in commercial opportunities in Guanacaste. To assess the fit, we’d like to understand:",
@@ -453,7 +453,7 @@ const en: Content = {
       "Living space with contemporary furnishings; illustrative photography",
   },
   about: {
-    label: "ABOUT TERRAL PARTNERS",
+    label: "About Terral Partners",
     title: "Purposeful connections.\nLasting possibilities.",
     paragraphs: [
       "Terral Partners is a joint initiative by two partners with a shared purpose: to connect businesses with suppliers suited to their needs.",
@@ -462,7 +462,7 @@ const en: Content = {
     ],
   },
   faq: {
-    label: "BEFORE WE TALK",
+    label: "Before we talk",
     title: "Good questions. Clear answers.",
     items: [
       {
@@ -496,7 +496,7 @@ const en: Content = {
     ],
   },
   contact: {
-    label: "YOUR NEXT STEP STARTS HERE",
+    label: "Your next step starts here",
     title: "Let’s talk about\nwhat’s next.",
     description:
       "A project to equip. An offering to connect. Tell us what you’re working on.",
@@ -504,9 +504,9 @@ const en: Content = {
   },
   footer: {
     descriptor: "Supplier sourcing &\ncommercial representation.",
-    navigation: "EXPLORE",
-    explore: "LET’S BEGIN",
-    location: "OUR FOCUS",
+    navigation: "Explore",
+    explore: "Let’s begin",
+    location: "Our focus",
     privacy: "Privacy",
     terms: "Terms of use",
     rights: "All rights reserved.",

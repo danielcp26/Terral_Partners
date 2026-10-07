@@ -57,7 +57,12 @@ export default function SiteFooter({ locale }: { locale: Locale }) {
           <Link href={`/${locale}/terms`}>{t.footer.terms}</Link>
         </div>
       </div>
-      <p className="container image-note">{t.footer.illustrative}</p>
+      <p className="container image-note">
+        {t.footer.illustrative}{" "}
+        {locale === "es"
+          ? "Video de portada generado con IA, inspirado en Guanacaste."
+          : "AI-generated hero film inspired by Guanacaste."}
+      </p>
     </footer>
   );
 }

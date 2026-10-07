@@ -18,14 +18,14 @@ import type { Locale } from "@/lib/config";
 const copy = {
   es: {
     choose: "Explore las categorías",
-    needs: "PARA EMPEZAR LA CONVERSACIÓN",
+    needs: "Para empezar la conversación",
     categoryCta: "Hablar de esta necesidad",
     steps: "Explore cada paso",
     next: "Siguiente paso",
     previous: "Paso anterior",
     start: "Empezar mi proyecto",
-    step: "PASO",
-    of: "DE",
+    step: "Paso",
+    of: "de",
     labels: ["Su proyecto", "Evaluación", "Conexión", "Acuerdo directo"],
     needsList: [
       [
@@ -47,14 +47,14 @@ const copy = {
   },
   en: {
     choose: "Explore sourcing categories",
-    needs: "TO START THE CONVERSATION",
+    needs: "To start the conversation",
     categoryCta: "Discuss this requirement",
     steps: "Explore each step",
     next: "Next step",
     previous: "Previous step",
     start: "Start my project",
-    step: "STEP",
-    of: "OF",
+    step: "Step",
+    of: "of",
     labels: ["Your project", "Assessment", "Connection", "Direct agreement"],
     needsList: [
       [
@@ -138,9 +138,6 @@ export function CategoryExplorer({
               />
             </motion.div>
           </AnimatePresence>
-          <span className="category-image-number" aria-hidden="true">
-            0{selected + 1}
-          </span>
           <span className="category-image-tag">{item.tag}</span>
         </div>
         <motion.div

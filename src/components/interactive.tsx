@@ -5,7 +5,6 @@ import {
   MotionConfig,
   useReducedMotion,
   useAnimate,
-  useInView,
   stagger,
   useScroll,
   useSpring,
@@ -60,36 +59,7 @@ export function Reveal({
   children: ReactNode;
   className?: string;
 }) {
-  const reduce = useReducedMotion();
-  const [scope, animate] = useAnimate();
-  const inView = useInView(scope, { once: true, amount: 0.12 });
-  useEffect(() => {
-    if (!inView || reduce) return;
-    const entrance = animate(
-      scope.current,
-      { opacity: [0.25, 1], y: [36, 0] },
-      { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
-    );
-    const cards = scope.current.querySelectorAll(
-      ".audience-card, .why-items > div",
-    );
-    const cascade = cards.length
-      ? animate(
-          cards,
-          { opacity: [0, 1], y: [26, 0] },
-          { duration: 0.55, delay: stagger(0.12), ease: "easeOut" },
-        )
-      : null;
-    return () => {
-      entrance.stop();
-      cascade?.stop();
-    };
-  }, [inView, reduce, animate, scope]);
-  return (
-    <motion.div ref={scope} className={className} initial={false}>
-      {children}
-    </motion.div>
-  );
+  return <div className={className}>{children}</div>;
 }
 export function FAQ({ items }: { items: { q: string; a: string }[] }) {
   const [open, setOpen] = useState<number | null>(0);
